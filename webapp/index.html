@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bilboyd Rentals</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+      <nav>
+        <a href="index.html">BilBoyd Car Rentals</a>
+        <a href="admin.html">Admin panel</a>
+      </nav>
+    </header>
+    <h1>Customer Interface</h1>
+    <main>
+      <div class="small-block">
+        <h2>Wallet connexion</h2>
+        <button onclick="connectWallet()">Connect Wallet</button>
+        <p id="walletAddress">Wallet not connected</p>
+      </div>
+      
+      <div class="wide-block">
+        <h2>Car List</h2>
+        <button onclick="loadCars()">Load Car List</button>
+        <div id="carList"></div>
+      </div>
+
+      <div class="small-block">
+        <h2>Lease a Car</h2>
+        <form id="leaseForm" onsubmit="submitLeaseForm(event)">
+            <input type="number" id="carId" placeholder="CarId of the selected car" required>
+            <input type="number" id="driverExperience" placeholder="Driver Experience (years)" required>
+            <input type="number" id="mileageCap" placeholder="Mileage Cap" required>
+            <input type="number" id="contractDuration" placeholder="Contract Duration (months)" required>
+            <button type="submit">Lease Car</button>
+        </form>
+      </div>
+
+      <div class="small-block">
+        <h2>Get the key</h2>
+        <form id="validateLeaseForm">
+          <label for="validateCarId">Enter Car ID to Validate Lease:</label>
+          <input type="text" id="validateCarId" required>
+          <button onclick="submitValidateLeaseForm(event)">Get the Key</button>
+        </form>
+      </div>
+
+      <div class="small-block">
+        <h2>Make Monthly Payment</h2>
+        <form id="monthlyPaymentForm" onsubmit="submitMonthlyPaymentForm(event)">
+          <input type="number" id="paymentCarId" placeholder="Car ID" required>
+          <button type="submit">Submit Payment</button>
+        </form>
+      </div>
+
+      <div class="small-block">
+        <h2>Terminate Lease</h2>
+        <form id="terminateLeaseForm" onsubmit="submitTerminateLeaseForm(event)">
+          <label for="terminateCarId">Car ID:</label>
+          <input type="number" id="terminateCarId" required>
+          <label for="distanceTravelledEndingLease">Distance Travelled (km):</label>
+          <input type="number" id="distanceTravelledEndingLease" required>
+          <button type="submit">Terminate Lease</button>
+        </form>
+      </div>
+      
+      <div class="small-block">
+        <h2>Extend Lease of 1year</h2>
+        <form id="extendLeaseForm" onsubmit="submitExtendLeaseForm(event)">
+          <label for="extendCarId">Car ID:</label>
+          <input type="number" id="extendCarId" required>
+          <label for="extendDistanceTravelled">Distance Travelled (km):</label>
+          <input type="number" id="extendDistanceTravelled" required>
+          <label for="newDriverExperience2">Experience Acquired : </label>
+          <input type="number" id="newDriverExperience2" required>
+          <button type="submit">Extend Lease</button>
+        </form>
+      </div>
+
+      <div class="small-block">
+        <h2>Sign New Lease</h2>
+        <form id="signNewLeaseForm" onsubmit="submitSignNewLeaseForm(event)">
+          <label for="oldCarId">Old Car ID:</label>
+          <input type="number" id="oldCarId" required>
+          <label for="distanceTravelledNewLease">Distance Travelled with old car (km):</label>
+          <input type="number" id="distanceTravelledNewLease" required>
+          <label for="newCarId">New Car ID:</label>
+          <input type="number" id="newCarId" required>
+          <label for="newMileageCap">New Mileage Cap (km):</label>
+          <input type="number" id="newMileageCap" required>
+          <label for="newContractDuration">New Contract Duration (months):</label>
+          <input type="number" id="newContractDuration" required>
+          <label for="newDriverExperience">Experience Acquired : </label>
+          <input type="number" id="newDriverExperience" required>
+          <button type="submit">Sign New Lease</button>
+        </form>
+      </div>
+    </main>
+    
+    <script src="script.js" type="module"></script>
+</body>
+</html>
+

@@ -1,0 +1,110 @@
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Police sobre mais moins brute */
+    background-color: #f9f9f9; /* Fond clair pour une meilleure lisibilité */
+    color: #333; /* Texte en gris foncé pour une bonne lisibilité */
+}
+
+header {
+    width: 100%;
+    background-color: #ececec; /* Fond gris clair pour l'en-tête */
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav a {
+    text-decoration: none;
+    padding: 15px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+body h1 {
+    margin-left: 20px;
+}
+
+main {
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*bloc style*/
+main > div, main > form, main > button {
+    background-color: #e6e6e6; /* Fond gris clair pour chaque bloc */
+    border: 1px solid #ccc; /* Bordure simple */
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Légère ombre pour un effet visuel agréable */
+}
+
+main  div h2 {
+    margin:0;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #d9d9d9; /* Bouton gris clair */
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #cccccc; /* Légère différence au survol */
+}
+
+input[type="text"],
+input[type="number"] {
+    width: calc(100% - 20px); /* Largeur ajustée pour s’adapter au parent */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+/* Wallet Block */
+#walletAddress {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: #555; /* Texte un peu plus clair */
+    font-weight: bold;
+}
+
+/* List Blocks */
+#carList, #allLeases, #carOwners {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Petit espace entre les sous-blocs */
+}
+
+#carList div, #allLeases div, #carOwners div {
+    flex: 1 1 calc(20% - 10px); /* 20% de largeur moins l’espace entre blocs */
+    background-color: #fff; /* Sous-blocs avec fond blanc */
+    border: 1px solid #ddd; /* Bordure pour délimiter */
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Petite ombre pour démarquer */
+}
+
+#carList div p, #allLeases div p, #carOwners div p {
+    margin: 5px 0;
+}
+
+.small-block {
+    width : 45%;
+}
+
+.wide-block {
+    width : 94%;
+}
